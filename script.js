@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize navigation
     initNavigation();
     
+    // Initialize project images
+    initProjectImages();
     
     // Initialize fade-in animations
     initFadeInAnimations();
@@ -187,6 +189,33 @@ function initNavigation() {
     });
 }
 
+// Initialize project images
+function initProjectImages() {
+    const projectImages = document.querySelectorAll('.project-image img');
+    
+    projectImages.forEach(img => {
+        // Add loading class initially
+        img.style.opacity = '0';
+        
+        // Handle successful image load
+        img.addEventListener('load', () => {
+            img.style.opacity = '1';
+        });
+        
+        // Handle image error
+        img.addEventListener('error', () => {
+            console.log('Failed to load image:', img.src);
+            img.style.opacity = '0.5';
+            // You could add a placeholder or retry logic here
+        });
+        
+        // If image is already loaded (cached)
+        if (img.complete) {
+            img.style.opacity = '1';
+        }
+    });
+}
+
 // Hero animations
 function initHeroAnimations() {
     // Removed all hero text animations to prevent interference with parallax
@@ -335,18 +364,60 @@ document.addEventListener('DOMContentLoaded', initPageTransitions);
 function initMobileMenu() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    let isClosing = false;
+    
+    function closeMenu() {
+        if (isClosing) return;
+        isClosing = true;
+        
+        // Remove active class and restore body scroll immediately
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        document.body.style.overflow = '';
+        isClosing = false;
+    }
     
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+        // Toggle menu on button click
+        navToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (navMenu.classList.contains('active')) {
+                closeMenu();
+            } else {
+                navMenu.classList.add('active');
+                navToggle.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+        
+        // Close menu when clicking on navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
         });
         
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+                closeMenu();
+            }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+        
+        // Handle window resize - close menu if screen gets larger
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024 && navMenu.classList.contains('active')) {
+                closeMenu();
             }
         });
     }
@@ -402,36 +473,103 @@ document.addEventListener('DOMContentLoaded', optimizePerformance);
 const mobileMenuCSS = `
 @media (max-width: 1024px) {
     .nav-menu {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 300px;
-        height: calc(100vh - 70px);
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 2rem;
-        transition: right 0.3s ease;
-        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background: rgba(0, 0, 0, 0.95) !important;
+        backdrop-filter: blur(10px);
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 2rem !important;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        z-index: 999 !important;
+        text-align: center !important;
+        visibility: hidden !important;
     }
     
     .nav-menu.active {
-        right: 0;
+        right: 0 !important;
+        visibility: visible !important;
+    }
+    
+    /* Instant close - no transition when closing */
+    .nav-menu:not(.active) {
+        transition: none !important;
+        right: -100% !important;
+        visibility: hidden !important;
     }
     
     .nav-menu .nav-link {
-        margin: 1rem 0;
+        color: #fff;
+        margin: 2rem 0;
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        width: 100%;
+        display: block;
+        opacity: 0;
+        transform: translateY(30px);
+        letter-spacing: -0.02em;
+    }
+    
+    .nav-menu.active .nav-link {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.2s;
+    }
+    
+    .nav-menu .nav-link:hover {
+        opacity: 0.6;
+        transform: translateY(0) scale(1.05);
+    }
+    
+    .nav-menu .contact-btn {
+        margin-top: 3rem;
+        background: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 1rem 2rem;
+        border-radius: 0;
         font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    
+    .nav-menu.active .contact-btn {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.2s;
+    }
+    
+    .nav-menu .contact-btn:hover {
+        background: #fff;
+        color: #000;
+    }
+    
+    .nav-toggle.active .menu-text {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu .nav-link {
+        font-size: 2rem;
+        margin: 1.5rem 0;
     }
     
     .nav-menu .contact-btn {
         margin-top: 2rem;
-    }
-    
-    .nav-toggle.active .menu-text {
-        opacity: 0.6;
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
     }
 }
 `;
