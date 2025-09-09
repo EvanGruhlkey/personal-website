@@ -546,6 +546,7 @@ body {
     text-decoration: underline;
     font-size: 1rem;
     transition: opacity 0.3s ease;
+    margin-top: -4rem;
 }
 
 .view-all-btn:hover {
@@ -1517,5 +1518,46 @@ a.project-card:hover .project-overlay,
         min-width: 50px;
         height: 50px;
         font-size: 0.7rem;
+    }
+}
+
+/* Copyright Section */
+.footer-copyright {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.copyright-content {
+    text-align: center;
+}
+
+.copyright-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.copyright-tagline {
+    font-size: 0.8rem !important;
+    color: #999 !important;
+    font-style: italic;
+    font-weight: 400 !important;
+}
+
+/* Responsive Copyright */
+@media (max-width: 768px) {
+    .footer-copyright {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+    
+    .copyright-content p {
+        font-size: 0.8rem;
+    }
+    
+    .copyright-tagline {
+        font-size: 0.7rem !important;
     }
 }
