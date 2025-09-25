@@ -1,197 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <title>Evan Gruhlkey</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favico.ico">
-   
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Evan Personal Site">
+    <link rel="icon" href="favico.ico" type="image/x-icon" sizes="16x16">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#60a5fa'
+                    },
+                    fontFamily: {
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .font-mono {
+            font-family: ui-monospace, SFMono-Regular, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+    </style>
 </head>
-<body id="top">
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">EG</span>
-            </div>
-            <div class="nav-menu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <button class="contact-btn" onclick="window.location.href='mailto:evangruhlkey@tamu.edu'">
-                    Contact
-                  </button>
-            </div>
-            <div class="nav-toggle">
-                <span class="menu-text">MENU</span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-image">
-                <img src="hero4.jpg" alt="Code and Technology">
-            </div>
-            <div class="hero-text parallax-element">
-                <div class="featured-label">Student & Founder</div>
-                <h1 class="hero-title">Evan Gruhlkey</h1>
-                <div class="hero-year">2025</div>
-                <a href="#projects" class="view-project-btn">view portfolio</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="main-content"id="about">
-        <!-- Vision Statement -->
-        <section class="vision-section">
-            <div class="container">
-                <h2 class="vision-title">Computer Science student at Texas A&M University and a founder driven to build things that scale. From AI-powered platforms to predictive tools, my work centers on creating systems that are clean, reliable, and built to last.</h2>
-            </div>
-        </section>
-
-        <!-- Style Statement -->
-        <section class="style-section">
-            <div class="container">
-                <h3 class="style-title">Open to SWE and Quant internships for Spring and Summer 2026</h3>
-                <div class="scroll-indicator">
-                    <span>(SCROLL down)</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Scoutly Project -->
-        <section class="about-hero-section" >
-            <div class="container">
-                <div class="about-hero-content">
-                    <div class="about-hero-left">
-                        <h1 class="about-hero-title">Scoutly</h1>
-                    </div>
-                    <div class="about-hero-right">
-                        <div class="about-hero-image">
-                            <img src="Scoutly-dashboard.webp" alt="Scoutly Analytics Platform">
-                        </div>
-                        <div class="about-hero-text">
-                            <p>Scoutly is an AI-powered buyer agent for online marketplaces, designed to help users discover the best deals with speed and confidence. By combining modern web technologies with advanced machine learning, Scoutly analyzes vast amounts of listing data in real time—evaluating prices, seller history, and product details—to surface only the most relevant and trustworthy options.</p>
-                            
-                            <p>The platform provides intelligent search, predictive pricing insights, and personalized deal recommendations, streamlining the entire shopping experience. Whether you’re a casual buyer or a dedicated collector, Scoutly transforms marketplace browsing into a smarter, data-driven process.</p>
-                            
-                            <a href="https://www.getscoutly.org/" target="_blank" class="about-cta-btn">visit Scoutly</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects Section -->
-        <section class="works-section" id="projects">
-            <div class="container">
-                <!-- Large Typography Header -->
-                <div class="projects-hero">
-                    <h1 class="projects-hero-title">Featured<br>Projects</h1>
-                    <div class="projects-hero-counter">(06)</div>
-                </div>
-                
-                <div class="works-header">
-                    <div class="works-label">featured<br>projects</div>
-                    <div class="works-counter">(06)</div>
-                </div>
-                
-                
-                <div class="projects-visual-grid">
-               
-                    
-                    <a href="https://github.com/EvanGruhlkey/UltraVid" target="_blank" class="project-card">
-                        <div class="project-image">
-                            <img src="ultravid2.png" alt="Tiktok Downloader">
-                        </div>
-                        <div class="project-overlay">
-                            <h3>UltraVid is a watermark-free TikTok downloader that lets you save videos in the highest quality quickly, privately, and without ads</h3>
-                            <p>Python, JavaScript, Nginx, DigitalOcean</p>
-                            <span class="project-year">2025</span>
-                        </div>
-                    </a>
-                    <a href="https://github.com/EvanGruhlkey/Sniffle" target="_blank" class="project-card">
-                        <div class="project-image">
-                            <img src="sniffle2.png" alt="allergy tracker">
-                        </div>
-                        <div class="project-overlay">
-                            <h3>Sniffle is an AI-powered allergy companion that helps users predict, track, and manage allergy symptoms in real time, making seasonal and environmental allergies easier to handle</h3>
-                            <p>React Native, JavaScript, Firebase, Python</p>
-                            <span class="project-year">2025</span>
-                        </div>
-                    </a>
-                    <a href="https://github.com/EvanGruhlkey/MC_Simulation" target="_blank" class="project-card">
-                        <div class="project-image">
-                            <img src="MC.png" alt="Monte Carlo Simulation">
-                        </div>
-                        <div class="project-overlay">
-                            <h3>A Monte Carlo Portfolio Simulator for projecting thousands of potential investment outcomes</h3>
-                            <p>Python, NumPy, Pandas, Matplotlib </p>
-                            <span class="project-year">2024</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <a href="#" class="view-all-btn">view all projects</a>
-            </div>
-        </section>
-
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="portfolio-footer">
-        <div class="footer-container">
-            <div class="footer-content-wrapper">
-                <div class="footer-content">
-                    <div class="footer-header">
-                        <h2 class="footer-title">BUILDING SCALABLE SOLUTIONS<br>CREATING LASTING IMPACT</h2>
-                        <a href="mailto:evangruhlkey@tamu.edu" class="footer-cta-btn">Let's connect and collaborate</a>
-                    </div>
-                    
-                    <div class="footer-sections">
-                        <div class="footer-navigation">
-                            <h3>(NAVIGATION)</h3>
-                            <ul>
-                                <li><a href="#top">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#projects">Projects</a></li>
-                                <li><a href="https://www.getscoutly.org/" target="_blank">Scoutly</a></li>
-                                <li><a href="https://github.com/egruhlkey" target="_blank">GitHub</a></li>
-                                <li><a href="https://linkedin.com/in/evangruhlkey" target="_blank">LinkedIn</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="footer-acknowledgment">
-                            <h3>(philosophy)</h3>
-                            <p>I believe in building technology that scales.</p>
-                        </div>
-                        
-                        <div class="footer-info">
-                            <h3>(INFO)</h3>
-                            <div class="contact-details">
-                                <p><strong>L:</strong> College Station, TX</p>
-                                <p><strong>E:</strong> evangruhlkey@tamu.edu</p>
-                                <p><strong>G:</strong> github.com/egruhlkey</p>
-                                <p><strong>S:</strong> Open to Spring/Summer 2026 internships</p>
+<body class="min-h-screen bg-zinc-950 font-mono text-zinc-100 antialiased">
+    <div class="mx-auto max-w-4xl px-6">
+        <header class="py-6 md:py-12 mb-8 md:mb-16 flex flex-wrap items-center justify-between gap-4">
+            <a class="text-2xl font-bold" href="/">Evan Gruhlkey</a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6">
+                <a class="hover:text-primary transition-colors" href="#about">About</a>
+                <a class="hover:text-primary transition-colors" href="#projects">Projects</a>
+                <a class="hover:text-primary transition-colors" href="#blog">Blog</a>
+                <a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+            </nav>
+        </header>
+        
+        <div class="mx-auto max-w-4xl px-6 py-12">
+            <main class="space-y-24">
+                <section id="about" class="space-y-4">
+                    <p class="text-zinc-400 leading-relaxed max-w-2xl">Hi, I'm Evan 👋</p>
+                    <p class="text-zinc-400 leading-relaxed max-w-2xl">I'm a Computer Science student at Texas A&M University and a founder driven to build things that scale. I'm from New Braunfels, TX and like building software projects in my free time.</p>
+                    <p class="text-zinc-400 leading-relaxed max-w-2xl">Some of my favorite projects:</p>
+                    <ul class="list-disc pl-5 text-zinc-400 leading-relaxed max-w-2xl space-y-2">
+                        <li class="relative">
+                            <div class="flex items-start">
+                                <span>Building <a href="https://www.getscoutly.org/" target="_blank" class="text-primary hover:text-primary/80 transition-colors">Scoutly</a>, an AI-powered buyer agent for online marketplaces with intelligent search and predictive pricing
+                                    <a class="inline-flex items-center ml-1" aria-label="View Scoutly project details" href="https://www.getscoutly.org/" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right h-4 w-4 text-primary hover:text-primary/80 transition-colors">
+                                            <path d="M7 7h10v10"></path>
+                                            <path d="M7 17 17 7"></path>
+                                        </svg>
+                                    </a>
+                                </span>
                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-start">
+                                <span>Developed Sniffle, an AI-powered allergy companion that helps users predict and track symptoms in real time
+                                    <a class="inline-flex items-center ml-1" aria-label="View Sniffle project details" href="https://github.com/EvanGruhlkey/Sniffle" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right h-4 w-4 text-primary hover:text-primary/80 transition-colors">
+                                            <path d="M7 7h10v10"></path>
+                                            <path d="M7 17 17 7"></path>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-start">
+                                <span>Built a Monte Carlo Portfolio Simulator for projecting thousands of potential investment outcomes
+                                    <a class="inline-flex items-center ml-1" aria-label="View Monte Carlo project details" href="https://github.com/EvanGruhlkey/MC_Simulation" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right h-4 w-4 text-primary hover:text-primary/80 transition-colors">
+                                            <path d="M7 7h10v10"></path>
+                                            <path d="M7 17 17 7"></path>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-zinc-400 leading-relaxed max-w-2xl">Site last updated: September 2025</p>
+                </section>
 
-    <script src="script.js"></script>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <section id="currently" class="space-y-4">
+                        <h2 class="text-2xl font-mono text-zinc-500">CURRENTLY</h2>
+                        <div class="space-y-1">
+                            <h3 class="text-3xl font-mono">Founder</h3>
+                            <a class="flex items-center gap-2 hover:text-primary transition-colors" href="https://www.getscoutly.org/" target="_blank">
+                                <div class="w-6 h-6 bg-zinc-800"></div>
+                                <span class="font-mono">Scoutly</span>
+                            </a>
+                            <p class="font-mono text-zinc-500">May 2025 - Present</p>
+                        </div>
+                        <div class="space-y-12">
+                            <div class="space-y-1">
+                                <h3 class="text-3xl font-mono">Student - Computer Science</h3>
+                                <a class="flex items-center gap-2 hover:text-primary transition-colors" href="https://engineering.tamu.edu/" target="_blank">
+                                    <div class="w-6 h-6 bg-zinc-800"></div>
+                                    <span class="font-mono">Texas A&M University</span>
+                                </a>
+                                <p class="font-mono text-zinc-500">Aug 2023 - Present</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h2 class="text-2xl font-mono text-zinc-500 mb-4">PREVIOUSLY</h2>
+                            <div class="space-y-1">
+                                <h3 class="text-3xl font-mono">Intern</h3>
+                                <a class="flex items-center gap-2 hover:text-primary transition-colors" href="https://www.comalisd.org/" target="_blank">
+                                    <div class="w-6 h-6 bg-zinc-800"></div>
+                                    <span class="font-mono">Comal ISD</span>
+                                </a>
+                                <p class="font-mono text-zinc-500">Summer 2022</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="projects" class="space-y-8">
+                        <h2 class="text-2xl font-mono text-zinc-500">PROJECTS</h2>
+                        <div class="space-y-3">
+                            <a class="block p-4 rounded-lg bg-zinc-900 hover:bg-zinc-800/50 transition-colors" href="https://www.getscoutly.org/" target="_blank">
+                                <div class="space-y-2">
+                                    <h3 class="text-2xl font-mono">Scoutly</h3>
+                                    <p class="text-zinc-500 font-mono text-sm">AI-powered buyer agent for online marketplaces</p>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">React</span>
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Python</span>
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Machine Learning</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                        <span class="text-xs font-mono underline">Visit Scoutly</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="block p-4 rounded-lg bg-zinc-900 hover:bg-zinc-800/50 transition-colors" href="https://github.com/EvanGruhlkey/knowledge-graph" target="_blank">
+                                <div class="space-y-2">
+                                    <h3 class="text-2xl font-mono">Knowledge Graph</h3>
+                                    <p class="text-zinc-500 font-mono text-sm">Scrapes your notes, emails, and saved links → builds a graph that “thinks with you” suggesting connections you never noticed</p>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">FastAPI</span>
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">MiniLM</span>
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Cytoscape.js</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                        <span class="text-xs font-mono underline">View on GitHub</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="block p-4 rounded-lg bg-zinc-900 hover:bg-zinc-800/50 transition-colors" href="https://github.com/EvanGruhlkey/UltraVid" target="_blank">
+                                <div class="space-y-2">
+                                    <h3 class="text-2xl font-mono">UltraVid</h3>
+                                    <p class="text-zinc-500 font-mono text-sm">Watermark-free TikTok downloader with highest quality output</p>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Python</span>
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">JavaScript</span>
+                                        <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Nginx</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                        <span class="text-xs font-mono underline">View on GitHub</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/70 to-zinc-950 pointer-events-none"></div>
+                                <a class="block p-4 rounded-lg bg-zinc-900 hover:bg-zinc-800/50 transition-colors" href="https://github.com/EvanGruhlkey/Sniffle" target="_blank">
+                                    <div class="space-y-2">
+                                        <h3 class="text-2xl font-mono">Sniffle</h3>
+                                        <p class="text-zinc-500 font-mono text-sm">AI-powered allergy companion for real-time symptom tracking</p>
+                                        <div class="flex flex-wrap gap-1">
+                                            <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">React Native</span>
+                                            <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Firebase</span>
+                                            <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Python</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                            <span class="text-xs font-mono underline">View on GitHub</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <button onclick="showAllProjects()" class="absolute inset-x-0 bottom-0 w-full py-3 bg-gradient-to-t from-zinc-950 via-zinc-950/90 to-transparent text-white font-mono hover:from-zinc-900 hover:via-zinc-900/90 transition-colors">View all projects</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <section id="blog" class="space-y-8">
+                    <h2 class="text-2xl font-mono text-zinc-500">BLOG</h2>
+                    <p class="text-zinc-400 leading-relaxed max-w-2xl">Work in progress</p>
+                </section>
+
+                <section id="contact" class="space-y-8">
+                    <h2 class="text-2xl font-mono text-zinc-500">LINKS</h2>
+                    <div class="flex gap-6">
+                        <a class="flex items-center gap-2 text-zinc-400 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" href="https://github.com/EvanGruhlkey">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github h-5 w-5">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a class="flex items-center gap-2 text-zinc-400 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/evangruhlkey">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a class="flex items-center gap-2 text-zinc-400 hover:text-primary transition-colors" href="mailto:evangruhlkey@tamu.edu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-5 w-5">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            <span>evangruhlkey@tamu.edu</span>
+                        </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Show all projects function
+        function showAllProjects() {
+            const projectsContainer = document.querySelector('#projects .space-y-3');
+            const relativeContainer = document.querySelector('#projects .relative');
+            
+            // Remove the gradient overlay and show more projects
+            if (relativeContainer && projectsContainer) {
+                // Remove the gradient overlay
+                const gradientOverlay = relativeContainer.querySelector('.absolute.inset-0');
+                const button = relativeContainer.querySelector('button');
+                
+                if (gradientOverlay) gradientOverlay.remove();
+                if (button) button.remove();
+                
+                // Remove relative positioning
+                relativeContainer.classList.remove('relative');
+                
+                // Add more project cards
+                const additionalProjects = `
+                    <a class="block p-4 rounded-lg bg-zinc-900 hover:bg-zinc-800/50 transition-colors" href="https://github.com/EvanGruhlkey/MC_Simulation" target="_blank">
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-mono">Monte Carlo Portfolio Simulator</h3>
+                            <p class="text-zinc-500 font-mono text-sm">Tool for projecting thousands of potential investment outcomes</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Python</span>
+                                <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">NumPy</span>
+                                <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Pandas</span>
+                                <span class="px-2 py-0.5 bg-zinc-800 rounded-full text-xs font-mono">Matplotlib</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                <span class="text-xs font-mono underline">View on GitHub</span>
+                            </div>
+                        </div>
+                 
+                `;
+                
+                projectsContainer.insertAdjacentHTML('beforeend', additionalProjects);
+            }
+        }
+    </script>
 </body>
 </html>
