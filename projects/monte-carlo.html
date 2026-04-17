@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monte Carlo Portfolio Simulator – Evan Gruhlkey</title>
+    <meta name="description" content="Monte Carlo Portfolio Simulator: projecting thousands of potential investment outcomes.">
+    <link rel="icon" href="../favico.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <main>
+        <nav class="page-nav">
+            <a href="../">home</a>,
+            <a href="javascript:void(0)" id="theme-link" onclick="toggleTheme()">dark</a>
+        </nav>
+
+        <div class="project-header">
+            <h1>Monte Carlo Portfolio Simulator</h1>
+            <div class="project-meta">
+                <span>2024</span>
+                <span>Python · NumPy · Pandas · Matplotlib</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EvanGruhlkey/MC_Simulation" target="_blank" rel="noopener">GitHub &nearr;</a>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <p>
+                A simulation tool that projects thousands of potential investment portfolio outcomes using
+                Monte Carlo methods, helping users understand the range of possibilities rather than relying
+                on a single expected return.
+            </p>
+
+            <h2>Motivation</h2>
+            <p>
+                Most portfolio calculators give you one number: an average expected return. But real markets
+                are stochastic. I wanted a tool that shows the full distribution of outcomes: the best case,
+                the worst case, and everything in between. That's what Monte Carlo simulation does.
+            </p>
+
+            <h2>How it works</h2>
+            <ul>
+                <li>User inputs portfolio allocation, initial investment, time horizon, and contribution schedule</li>
+                <li>The simulator samples thousands of return paths from historical distributions</li>
+                <li>Results show percentile bands (5th, 25th, 50th, 75th, 95th) of portfolio value over time</li>
+                <li>Visualizations make it easy to understand the range of outcomes and tail risks</li>
+            </ul>
+
+            <h2>Technical details</h2>
+            <p>
+                Built in Python with NumPy for fast vectorized simulation of thousands of parallel portfolio
+                paths. Pandas handles data manipulation and historical return processing. Matplotlib generates
+                the probability fan charts. The simulator supports configurable asset correlations and
+                rebalancing strategies.
+            </p>
+        </div>
+    </main>
+
+    <script src="../theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quoril – Evan Gruhlkey</title>
+    <meta name="description" content="Quoril: AI-powered buyer agents for online marketplaces.">
+    <link rel="icon" href="../favico.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <main>
+        <nav class="page-nav">
+            <a href="../">home</a>,
+            <a href="javascript:void(0)" id="theme-link" onclick="toggleTheme()">dark</a>
+        </nav>
+
+        <div class="project-header">
+            <h1>Quoril</h1>
+            <div class="project-meta">
+                <span>2025 – Present</span>
+                <span>React · Express.js · LLMs</span>
+            </div>
+            <div class="project-links">
+                <a href="https://www.getquoril.com/" target="_blank" rel="noopener">Live site &nearr;</a>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <p>
+                Quoril is an AI-powered buyer agent for online marketplaces. It combines intelligent search
+                with predictive pricing to help users find the best deals across platforms, acting as an
+                autonomous purchasing assistant that understands context, preferences, and market trends.
+            </p>
+
+            <h2>Motivation</h2>
+            <p>
+                Online marketplaces are flooded with listings. Finding the right item at the right price
+                requires sifting through duplicates, comparing across platforms, and timing purchases well.
+                I wanted to build a system that could handle all of that autonomously.
+            </p>
+
+            <h2>How it works</h2>
+            <ul>
+                <li>Natural language search powered by LLMs to understand user intent beyond keyword matching</li>
+                <li>Cross-platform aggregation to surface relevant listings from multiple marketplaces</li>
+                <li>Predictive pricing models that estimate fair value and flag good deals</li>
+                <li>Agent-based architecture where buyer agents negotiate and execute purchases on behalf of users</li>
+            </ul>
+
+            <h2>Technical details</h2>
+            <p>
+                The frontend is built in React with a clean conversational interface. The backend runs on
+                Express.js, orchestrating multiple LLM calls for query understanding, listing evaluation, and
+                price prediction. The system uses a retrieval-augmented pipeline to keep results grounded in
+                real marketplace data.
+            </p>
+        </div>
+    </main>
+
+    <script src="../theme.js"></script>
+
+</body>
+</html>

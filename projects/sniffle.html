@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sniffle – Evan Gruhlkey</title>
+    <meta name="description" content="Sniffle: an allergy companion for real-time symptom tracking and risk analysis.">
+    <link rel="icon" href="../favico.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <main>
+        <nav class="page-nav">
+            <a href="../">home</a>,
+            <a href="javascript:void(0)" id="theme-link" onclick="toggleTheme()">dark</a>
+        </nav>
+
+        <div class="project-header">
+            <h1>Sniffle</h1>
+            <div class="project-meta">
+                <span>2024</span>
+                <span>React Native · Firebase · ML</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EvanGruhlkey/Sniffle" target="_blank" rel="noopener">GitHub &nearr;</a>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <p>
+                Sniffle is a mobile allergy companion that helps users predict and track symptoms in real time,
+                combining environmental data with personal health patterns to provide actionable risk analysis.
+            </p>
+
+            <h2>Motivation</h2>
+            <p>
+                Allergy sufferers often don't know what's triggering their symptoms or when conditions will be
+                worst. Existing tools show generic pollen counts but don't personalize to individual sensitivity
+                patterns. I wanted to build something that learns from you.
+            </p>
+
+            <h2>How it works</h2>
+            <ul>
+                <li>Users log daily symptoms through a quick, low-friction interface</li>
+                <li>The app pulls real-time environmental data: pollen counts, air quality, humidity, weather</li>
+                <li>A machine learning model correlates personal symptom history with environmental factors</li>
+                <li>Predictive alerts warn users when conditions match their worst symptom days</li>
+            </ul>
+
+            <h2>Technical details</h2>
+            <p>
+                Built in React Native for cross-platform mobile support. Firebase handles auth, real-time
+                database, and cloud functions. The ML pipeline runs serverside, training personalized models
+                per user as enough symptom data accumulates. Environmental data is sourced from public APIs
+                and cached for low-latency lookups.
+            </p>
+        </div>
+    </main>
+
+    <script src="../theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UltraVid – Evan Gruhlkey</title>
+    <meta name="description" content="UltraVid: watermark-free TikTok downloader with highest quality output.">
+    <link rel="icon" href="../favico.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <main>
+        <nav class="page-nav">
+            <a href="../">home</a>,
+            <a href="javascript:void(0)" id="theme-link" onclick="toggleTheme()">dark</a>
+        </nav>
+
+        <div class="project-header">
+            <h1>UltraVid</h1>
+            <div class="project-meta">
+                <span>2024</span>
+                <span>JavaScript · Nginx · Python</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EvanGruhlkey/UltraVid" target="_blank" rel="noopener">GitHub &nearr;</a>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <p>
+                UltraVid is a tool for downloading TikTok videos at the highest available quality, without
+                watermarks. It handles the reverse-engineering of TikTok's video delivery pipeline to extract
+                clean source files.
+            </p>
+
+            <h2>Motivation</h2>
+            <p>
+                Content creators and editors frequently need clean source video from TikTok for compilations,
+                analysis, or archiving. Existing tools were unreliable, ad-heavy, or produced low-quality output.
+                I built UltraVid to be fast, clean, and consistently reliable.
+            </p>
+
+            <h2>How it works</h2>
+            <ul>
+                <li>Takes a TikTok URL and resolves it to the underlying video asset</li>
+                <li>Bypasses watermark injection by targeting the pre-watermark video stream</li>
+                <li>Serves the highest bitrate version available from TikTok's CDN</li>
+                <li>Simple web interface: paste a link, get a clean download</li>
+            </ul>
+
+            <h2>Technical details</h2>
+            <p>
+                The backend is a Python service that handles URL resolution and video extraction. Nginx sits
+                in front as a reverse proxy and handles static file serving. The frontend is vanilla JavaScript
+                with a minimal UI. The system is designed to be self-hosted and lightweight.
+            </p>
+        </div>
+    </main>
+
+    <script src="../theme.js"></script>
+
+</body>
+</html>

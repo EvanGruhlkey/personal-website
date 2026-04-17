@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Knowledge Graph – Evan Gruhlkey</title>
+    <meta name="description" content="Knowledge Graph: a personal knowledge system that builds connections from your notes, emails, and links.">
+    <link rel="icon" href="../favico.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <main>
+        <nav class="page-nav">
+            <a href="../">home</a>,
+            <a href="javascript:void(0)" id="theme-link" onclick="toggleTheme()">dark</a>
+        </nav>
+
+        <div class="project-header">
+            <h1>Knowledge Graph</h1>
+            <div class="project-meta">
+                <span>2025</span>
+                <span>FastAPI · MiniLM · Cytoscape.js</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EvanGruhlkey/knowledge-graph" target="_blank" rel="noopener">GitHub &nearr;</a>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <p>
+                A personal knowledge system that scrapes your notes, emails, and saved links, then builds a
+                graph that "thinks with you", surfacing connections between ideas you never noticed.
+            </p>
+
+            <h2>Motivation</h2>
+            <p>
+                We accumulate information across dozens of apps and formats, but rarely see the threads that
+                connect them. I wanted a tool that could ingest everything I've saved and reveal the latent
+                structure: a second brain that actually helps you think, not just store.
+            </p>
+
+            <h2>How it works</h2>
+            <ul>
+                <li>Ingests content from notes, emails, bookmarks, and documents via configurable scrapers</li>
+                <li>Generates semantic embeddings using MiniLM to understand meaning, not just keywords</li>
+                <li>Builds a graph where nodes are ideas and edges are semantic similarity above a threshold</li>
+                <li>Interactive visualization in the browser with Cytoscape.js for exploring clusters and connections</li>
+            </ul>
+
+            <h2>Technical details</h2>
+            <p>
+                The backend is a FastAPI service that handles ingestion, embedding generation, and graph
+                construction. MiniLM (sentence-transformers) provides fast, lightweight embeddings that run
+                locally. The frontend renders the graph interactively with Cytoscape.js, supporting zoom,
+                pan, search, and cluster highlighting.
+            </p>
+        </div>
+    </main>
+
+    <script src="../theme.js"></script>
+
+</body>
+</html>
