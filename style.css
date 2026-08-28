@@ -382,6 +382,172 @@ body.dark .page-nav a:hover {
     color: #e0e0e0;
 }
 
+/* ── Honors ePortfolio ── */
+
+body.honors-page main.honors-layout {
+    max-width: 1100px;
+    margin: 0;
+    padding: 2.5rem 2rem 4rem 2.5rem;
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.honors-sidebar {
+    position: sticky;
+    top: 2rem;
+}
+
+.honors-sidebar-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.15rem;
+    transition: color 0.3s;
+}
+
+.honors-sidebar-sub {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 1.25rem;
+    transition: color 0.3s;
+}
+
+.honors-toc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.honors-toc a {
+    font-size: 0.85rem;
+    color: #666;
+    text-decoration: none;
+    line-height: 1.4;
+    transition: color 0.15s;
+}
+
+.honors-toc a:hover {
+    color: #111;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+}
+
+.honors-meta-nav {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.honors-meta-nav a {
+    color: #999;
+    text-decoration: none;
+}
+
+.honors-meta-nav a:hover {
+    color: #111;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+}
+
+.honors-content {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.75;
+    max-width: 42rem;
+    transition: color 0.3s;
+}
+
+.honors-header {
+    margin-bottom: 2rem;
+}
+
+.honors-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s;
+}
+
+.honors-header time {
+    font-size: 0.9rem;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.honors-content section {
+    margin-bottom: 2.5rem;
+}
+
+.honors-content h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #111;
+    transition: color 0.3s;
+}
+
+.honors-content p {
+    margin-bottom: 0.85rem;
+}
+
+.honors-content ul {
+    margin: 0.25rem 0 0.85rem 1.2rem;
+    list-style: disc;
+}
+
+.honors-content li {
+    margin-bottom: 0.35rem;
+}
+
+body.dark .honors-sidebar-title,
+body.dark .honors-content h2,
+body.dark .honors-header h1 {
+    color: #e0e0e0;
+}
+
+body.dark .honors-sidebar-sub,
+body.dark .honors-header time {
+    color: #666;
+}
+
+body.dark .honors-toc a,
+body.dark .honors-meta-nav,
+body.dark .honors-meta-nav a {
+    color: #888;
+}
+
+body.dark .honors-toc a:hover,
+body.dark .honors-meta-nav a:hover {
+    color: #e0e0e0;
+}
+
+body.dark .honors-content {
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    body.honors-page main.honors-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 1.25rem 3rem;
+    }
+
+    .honors-sidebar {
+        position: static;
+    }
+
+    .honors-toc {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 480px) {

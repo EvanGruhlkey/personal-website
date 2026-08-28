@@ -1,0 +1,10 @@
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # /honors and /honors/ both serve the honors page
+    RewriteRule ^honors/?$ honors/index.html [L]
+</IfModule>
