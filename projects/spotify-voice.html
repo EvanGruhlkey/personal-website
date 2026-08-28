@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotify Voice Control | Evan Gruhlkey</title>
+    <meta name="description" content="Offline voice control for Spotify and system media keys on Windows, built by Evan Gruhlkey.">
+    <link rel="canonical" href="https://evangruhlkey.com/projects/spotify-voice.html">
+    <meta name="author" content="Evan Gruhlkey">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Evan Gruhlkey">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Spotify Voice Control | Evan Gruhlkey">
+    <meta property="og:description" content="Offline voice control for Spotify and system media keys on Windows, built by Evan Gruhlkey.">
+    <meta property="og:url" content="https://evangruhlkey.com/projects/spotify-voice.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@evangruhlkey">
+    <meta name="twitter:title" content="Spotify Voice Control | Evan Gruhlkey">
+    <meta name="twitter:description" content="Offline voice control for Spotify and system media keys on Windows, built by Evan Gruhlkey.">
+    <link rel="icon" href="/favico.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://evangruhlkey.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://evangruhlkey.com/projects/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Spotify Voice Control",
+            "item": "https://evangruhlkey.com/projects/spotify-voice.html"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Spotify Voice Control",
+    "url": "https://evangruhlkey.com/projects/spotify-voice.html",
+    "author": {
+        "@type": "Person",
+        "name": "Evan Gruhlkey",
+        "url": "https://evangruhlkey.com/"
+    },
+    "description": "Offline voice control for Spotify and system media keys on Windows, built by Evan Gruhlkey."
+}
+    </script>
+</head>
+<body>
+
+    <main>
+        <nav class="page-nav">
+            <a href="/">home</a>,
+            <a href="/projects/">projects</a>,
+            <a href="javascript:void(0)" id="theme-link" onclick="toggleTheme()">dark</a>
+        </nav>
+
+        <div class="project-header">
+            <h1>Spotify Voice Control</h1>
+            <div class="project-meta">
+                <span>2026</span>
+                <span>Python · Vosk</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/EvanGruhlkey/spotify-voice-control" target="_blank" rel="noopener">GitHub &nearr;</a>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <p>
+                A voice control utility for Spotify and any app that listens to system media keys.
+                It runs in the Windows tray and uses offline speech recognition, so basic commands
+                work without sending audio to the cloud.
+            </p>
+
+            <h2>How it works</h2>
+            <ul>
+                <li>Vosk listens on the default microphone and matches phrases from a local config</li>
+                <li>Commands include next/previous track, play, pause, and open Spotify</li>
+                <li>Optional Spotify Web API support for account login and playback control</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="/theme.js"></script>
+
+</body>
+</html>

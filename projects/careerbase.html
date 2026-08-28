@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Careerbase: Software Engineering Jobs | Evan Gruhlkey</title>
+    <meta name="description" content="Careerbase by Evan Gruhlkey: software engineering jobs pulled directly from company ATS systems, not recycled job-board listings.">
+    <link rel="canonical" href="https://evangruhlkey.com/projects/careerbase.html">
+    <meta name="author" content="Evan Gruhlkey">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Evan Gruhlkey">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Careerbase: Software Engineering Jobs | Evan Gruhlkey">
+    <meta property="og:description" content="Careerbase by Evan Gruhlkey: software engineering jobs pulled directly from company ATS systems, not recycled job-board listings.">
+    <meta property="og:url" content="https://evangruhlkey.com/projects/careerbase.html">
+    <meta property="og:image" content="https://evangruhlkey.com/images/projects/careerbase.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@evangruhlkey">
+    <meta name="twitter:title" content="Careerbase: Software Engineering Jobs | Evan Gruhlkey">
+    <meta name="twitter:description" content="Careerbase by Evan Gruhlkey: software engineering jobs pulled directly from company ATS systems, not recycled job-board listings.">
+    <meta name="twitter:image" content="https://evangruhlkey.com/images/projects/careerbase.png">
+    <link rel="icon" href="/favico.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://evangruhlkey.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://evangruhlkey.com/projects/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Careerbase: Software Engineering Jobs",
+            "item": "https://evangruhlkey.com/projects/careerbase.html"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Careerbase: Software Engineering Jobs",
+    "url": "https://evangruhlkey.com/projects/careerbase.html",
+    "author": {
+        "@type": "Person",
+        "name": "Evan Gruhlkey",
+        "url": "https://evangruhlkey.com/"
+    },
+    "description": "Careerbase by Evan Gruhlkey: software engineering jobs pulled directly from company ATS systems, not recycled job-board listings."
+}
+    </script>
+</head>
+<body>
+
+    <main class="wide">
+        <nav class="page-nav">
+            <a href="/">home</a>,
+            <a href="/projects/">projects</a>,
+            <a href="javascript:void(0)" id="theme-link" onclick="toggleTheme()">dark</a>
+        </nav>
+
+        <div class="project-header">
+            <h1>Careerbase</h1>
+            <div class="project-meta">
+                <span>2026</span>
+                <span>React · FastAPI · PostgreSQL · Playwright</span>
+            </div>
+            <div class="project-links">
+                <a href="https://www.careerbase.pro/" target="_blank" rel="noopener">Live site &nearr;</a>
+                ·
+                <a href="https://github.com/EvanGruhlkey/job-agent" target="_blank" rel="noopener">GitHub &nearr;</a>
+            </div>
+        </div>
+
+        <figure class="project-shot">
+            <img src="/images/projects/careerbase.png" alt="Careerbase job board">
+        </figure>
+
+        <div class="project-body">
+            <p>
+                Careerbase is a job board that pulls software engineering postings directly from
+                company ATS systems — Greenhouse, Lever, Ashby, Gem, and Workday — plus custom
+                scrapers for Google, Apple, and Microsoft.
+            </p>
+
+            <h2>How it works</h2>
+            <ul>
+                <li>Frontend is a React SPA with search and filters for title, company, and location</li>
+                <li>Vercel functions proxy ATS APIs; a FastAPI backend stores listings in PostgreSQL</li>
+                <li>Playwright scrapers pull jobs from company career sites, including incremental updates</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="/theme.js"></script>
+
+</body>
+</html>
